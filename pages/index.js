@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import levkovich from '../public/levkovich.png';
 
 export default function Home() {
   return (
@@ -10,9 +11,11 @@ export default function Home() {
       </Head>
 
       <main>
+        <img src={levkovich} alt={"Sergey Levkovich"} className={"levkovich"}/>
         <h1 className="title">
           Sergey Levkovich
         </h1>
+
       </main>
 
       <footer>
@@ -82,78 +85,26 @@ export default function Home() {
 
         .title {
           margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
+          line-height: 4rem;
+          font-size: 3rem;
         }
 
-        .title,
-        .description {
+        .title {
           text-align: center;
         }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
+        
+        .levkovich {
+          width: 200px;
+          border-radius: 10% 50% 10% 10%;
+          
         }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
+        
+        .levkovich:hover {
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         }
 
         .logo {
           height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
         }
       `}</style>
 
