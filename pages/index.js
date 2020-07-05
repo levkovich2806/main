@@ -14,9 +14,11 @@ function Home() {
       </Head>
 
       <main className={styles.container}>
-        <div className={styles.main}>
-          Hello, I'm <span className={styles.author}>Sergey Levkovich</span>.<br/>
-          I'm a web developer.
+        <div className={styles.skew}>
+          <div className={styles.content}>
+            Hello, I'm <span className={styles.author}>Sergey Levkovich</span><br/>
+            I'm a web developer
+          </div>
         </div>
       </main>
     </div>
