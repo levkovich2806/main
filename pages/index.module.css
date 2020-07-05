@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main {
+  font-size: 56px;
+  text-align: center;
+}
+
+.author {
+  color: #e05353;
+}

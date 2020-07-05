@@ -5,21 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build && next export -o dist/ && npm run sitemap && npm run robots",
-    "export": "next export -o dist/",
+    "build": "next build && next export && npm run sitemap && npm run robots",
+    "export": "next export",
     "sitemap": "node sitemap_generator.js",
-    "robots": "npx cpx -u -v robots.txt dist/"
+    "robots": "npx cpx -u -v robots.txt out/"
   },
   "dependencies": {
-    "@zeit/next-css": "^1.0.1",
     "next": "9.4.4",
-    "next-compose-plugins": "^2.2.0",
-    "next-images": "^1.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^9.4.4",
     "nextjs-sitemap-generator": "^1.0.0"
   }
 }
