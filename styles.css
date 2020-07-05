@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'BlobSpongeyLowercase';
+  src: url('/fonts/BlobSpongeyLowercase-wKq3.ttf');
+}
+
+body {
+  margin: 0 auto;
+  font-family: "BlobSpongeyLowercase", serif;
+}
+
+h1 {
+  text-align: center;
+}
