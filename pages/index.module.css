@@ -3,11 +3,22 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }
 
-.main {
+.skew {
+  transform: skew(0deg, -5deg);
+  background: rgba(211, 211, 211, 0.3);
+  width: 100%;
+
+  padding: 100px 0;
+}
+
+.content {
   font-size: 56px;
   text-align: center;
+
+  transform: skew(0deg, 5deg);
 }
 
 .author {
