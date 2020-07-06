@@ -1,0 +1,101 @@
+.test {
+  position: relative;
+  width: 400px;
+  height: 400px;
+
+  background: lightblue;
+}
+
+.test_1, .test_2, .test_3, .test_4, .test_5 {
+  position: absolute;
+}
+
+.test_1 {
+  top: 175px;
+  left: 75px;
+  animation: move1 3s, opacity 3s;
+}
+
+.test_2 {
+  top: 175px;
+  left: 255px;
+  animation: move2 3s, opacity 3s;
+}
+
+.test_3 {
+  top: 175px;
+  left: 165px;
+  animation: move3 3s, opacity 3s;
+}
+
+.test_4 {
+  top: 75px;
+  left: 165px;
+  animation: move4 3s, opacity 3s;
+}
+
+.test_5 {
+  top: 275px;
+  left: 165px;
+  animation: move5 3s, opacity 3s;
+}
+
+@keyframes move1 {
+  from {
+    transform: translate(200px, 150px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes move2 {
+  from {
+    transform: translate(-100px, 50px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes move3 {
+  from {
+    transform: translate(-75px, -75px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes move4 {
+  from {
+    transform: translate(100px, -50px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes move5 {
+  from {
+    transform: translate(50px, 50px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

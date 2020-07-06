@@ -1,13 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import withAppLayout from '../layouts/main';
+import Character from '../components/animations/character';
 
 import styles from './index.module.css';
-import Menu from "../components/menu";
 
 function Home() {
   return (
-    <div className="container">
+    <div>
       <Head>
         <title>Sergey Levkovich</title>
         {/*<link rel="icon" href="/favicon.ico" />*/}
@@ -19,6 +19,7 @@ function Home() {
             Hello, I'm <span className={styles.author}>Sergey Levkovich</span><br/>
             I'm a web developer
           </div>
+          {/*<Character/>*/}
         </div>
       </main>
     </div>

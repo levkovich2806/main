@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 .skew {
@@ -11,15 +11,39 @@
   background: rgba(211, 211, 211, 0.3);
   width: 100%;
 
-  padding: 100px 0;
+  /*padding: 50px 0;*/
 }
 
 .content {
+  padding: 100px 0;
   font-size: 56px;
   text-align: center;
 
   transform: skew(0deg, 5deg);
 }
+
+
+/*.imagesContainer .js {*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
+
+/*  animation: moveJs 3s infinite alternate-reverse running;*/
+/*}*/
+
+/*.imagesContainer .js:hover {*/
+/*  animation-play-state: paused;*/
+/*}*/
+
+/*@keyframes moveJs {*/
+/*  from {*/
+/*    transform: translate(0, 100px);*/
+/*  }*/
+
+/*  to {*/
+/*    transform: translate(0, 0);*/
+/*  }*/
+/*}*/
 
 .author {
   color: #e05353;
