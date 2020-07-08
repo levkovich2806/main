@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <meta name="description"
                 content={`Personal page. Sergey Levkovich - web developer.`}
           />
-          <link rel="icon" type="image/png" href={"/favicon.ico")}/>
+          <link rel="icon" type="image/png" href={"/favicon.ico"}/>
 
           {/* facebook */}
           <meta
