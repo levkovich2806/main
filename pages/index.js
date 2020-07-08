@@ -4,6 +4,7 @@ import withAppLayout from '../layouts/main';
 import Character from '../components/animations/character';
 
 import styles from './index.module.css';
+import Social from "../components/Social";
 
 function Home() {
   return (
@@ -18,6 +19,9 @@ function Home() {
           <div className={styles.content}>
             Hello, I'm <span className={styles.author}>Sergey Levkovich</span><br/>
             I'm a web developer
+            <div className={styles.social}>
+              <Social/>
+            </div>
           </div>
           {/*<Character/>*/}
         </div>

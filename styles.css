@@ -7,6 +7,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "BlobSpongeyLowercase", serif;
+  font-size: 18px;
   width: 100%;
   height: 100%;
 }

@@ -16,7 +16,7 @@
 
 .content {
   padding: 100px 0;
-  font-size: 56px;
+  font-size: 2rem;
   text-align: center;
 
   transform: skew(0deg, 5deg);
@@ -46,5 +46,9 @@
 /*}*/
 
 .author {
-  color: #e05353;
+  color: #c48181;
+}
+
+.social {
+  margin-top: 30px;
 }
