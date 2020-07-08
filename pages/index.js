@@ -1,17 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import withAppLayout from '../layouts/main';
-import Character from '../components/animations/character';
+// import Character from '../components/animations/character';
 
 import styles from './index.module.css';
 import Social from "../components/Social";
 
 function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Sergey Levkovich</title>
-        {/*<link rel="icon" href="/favicon.ico" />*/}
       </Head>
 
       <main className={styles.container}>
@@ -26,7 +25,7 @@ function Home() {
           {/*<Character/>*/}
         </div>
       </main>
-    </div>
+    </>
   )
 }
 
