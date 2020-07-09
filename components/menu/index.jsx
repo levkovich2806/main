@@ -19,7 +19,7 @@ const Menu = () => {
         <a href="#" className={styles.closebtn} onClick={handleClose}>&times;</a>
         <Link href={"/"}><a href="#">Main</a></Link>
         {/*<Link href={"/contacts"}><a href="#">Contacts</a></Link>*/}
-        {/*<Link href={"/animations"}><a href="#">Animations</a></Link>*/}
+        <Link href={"/animations"}><a href="#">Animations</a></Link>
         <hr/>
         <div className={styles.category}>Projects:</div>
         <a href="https://wow.levkovich.dev" target={"_blank"}>WoW</a>
