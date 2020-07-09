@@ -37,6 +37,16 @@
   padding-left: 10px;
 }
 
+.nextjs {
+  padding-left: 10px;
+  display: block;
+  transition: 0.3s;
+  margin-top: 20px;
+  color: #818181;
+
+  white-space: nowrap;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;

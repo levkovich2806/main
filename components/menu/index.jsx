@@ -23,6 +23,7 @@ const Menu = () => {
         <hr/>
         <div className={styles.category}>Projects:</div>
         <a href="https://wow.levkovich.dev" target={"_blank"}>WoW</a>
+        <div className={styles.nextjs}>Powered by <a href={"https://nextjs.org/"} target={"_blank"}>Next.js</a></div>
       </div>
       <span style={{fontSize: "40px", cursor: "pointer"}} onClick={handleOpen}>&#9776;</span>
     </>
