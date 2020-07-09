@@ -7,7 +7,7 @@ const Social = () => {
     <div className={styles.icons}>
       <div className={styles.icon}>
         <a href={"https://github.com/levkovich2806"} target={"_blank"} rel="noopener">
-          <img src={"/icons/github.png"} alt={"Github"}/>
+          <img src={"/icons/github-logo.png"} alt={"Github"}/>
         </a>
       </div>
     </div>
