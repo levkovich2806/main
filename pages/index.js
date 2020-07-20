@@ -1,10 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import withAppLayout from '../layouts/main';
-// import Character from '../components/animations/character';
 
-import styles from './index.module.css';
-import Social from "../components/Social";
+import styles from './index.module.scss';
 
 function Home() {
   return (
@@ -13,20 +10,18 @@ function Home() {
         <title>Sergey Levkovich</title>
       </Head>
 
-      <main className={styles.container}>
-        <div className={styles.skew}>
-          <div className={styles.content}>
-            Hello, I'm <span className={styles.author}>Sergey Levkovich</span><br/>
-            I'm a web developer
-            <div className={styles.social}>
-              <Social/>
-            </div>
-          </div>
-          {/*<Character/>*/}
+      <header className={styles.header}>
+        <div className={styles.header__text}>
+          <h1 className={styles.header__text_main}>
+            <span className={styles.name}>Sergey</span> <span className={styles.surname}>Levkovic<span className={styles.surname__last}>h</span></span>
+          </h1>
+          <h2 className={styles.header__text_description}>
+            <span className={styles.text}>Frontend Developer</span>
+          </h2>
         </div>
-      </main>
+      </header>
     </>
   )
 }
 
-export default withAppLayout(Home);
+export default Home;
