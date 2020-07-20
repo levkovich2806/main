@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './index.module.css';
-import withAppLayout from "../../layouts/main";
 import Icons from "../../components/animations/icons";
 import Character from "../../components/animations/character";
 
@@ -18,4 +17,4 @@ const Animations = () => {
   );
 };
 
-export default withAppLayout(Animations);
+export default Animations;

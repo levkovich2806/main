@@ -1,5 +1,4 @@
 import React from 'react';
-import withAppLayout from '../../layouts/main';
 
 const Contacts = () => {
   return (
@@ -9,4 +8,4 @@ const Contacts = () => {
   );
 };
 
-export default withAppLayout(Contacts);
+export default Contacts;

@@ -1,23 +1,8 @@
-@font-face {
-  font-family: 'BlobSpongeyLowercase';
-  src: url('/fonts/BlobSpongeyLowercase-wKq3.ttf');
-}
-
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "BlobSpongeyLowercase", serif;
+  font-family: "Open Sans", serif;
   font-size: 18px;
-  width: 100vw;
-  height: 100vh;
-}
 
-h1 {
-  text-align: center;
-  margin: 0;
-  padding: 20px;
+  overflow-x: hidden;
 }
-
-/*.pageContent {*/
-/*  padding: 20px;*/
-/*}*/

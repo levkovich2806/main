@@ -1,0 +1,105 @@
+$second: #69b8d0;
+
+.header {
+  height: 100vh;
+
+  position: relative;
+
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("/images/header.jpg");
+  background-position: center;
+  background-size: auto auto;
+  background-repeat: no-repeat;
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    color: white;
+    text-align: center;
+
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    &_main {
+      font-size: 28px;
+      text-transform: uppercase;
+
+      .name {
+        //color: #EC9A6B
+      }
+
+      .surname {
+        color: $second;
+
+        &__last {
+
+        }
+      }
+    }
+
+    &_description {
+      position: relative;
+      font-size: 17px;
+
+
+      .text {
+
+        &:after {
+          position: absolute;
+          content: '';
+          height: 2px;
+          bottom: -6px;
+
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          width: 200px;
+          background: $second;
+
+          transition: 0.3s;
+        }
+
+        &:hover:after {
+          width: 250px;
+        }
+      }
+    }
+
+
+  }
+}
+
+@media (min-width: 425px) {
+  .header {
+
+    &__text {
+      &_main {
+        font-size: 40px;
+      }
+
+      &_description {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+
+    &__text {
+      &_main {
+        font-size: 60px;
+      }
+
+      &_description {
+        font-size: 27px;
+      }
+    }
+  }
+}
