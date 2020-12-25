@@ -13,7 +13,7 @@ function Home() {
       <header className={styles.header}>
         <div className={styles.header__text}>
           <h1 className={styles.header__text_main}>
-            <span className={styles.name}>Sergey</span> <span className={styles.surname}>Levkovic<span className={styles.surname__last}>h</span></span>
+            <span className={styles.name}>Sergey</span> <span className={styles.surname}>Levkovic<span className={styles.surname__last}>h<img className={styles.christmas} src={"/images/headChristmas.webp"} /></span></span>
           </h1>
           <h2 className={styles.header__text_description}>
             <span className={styles.text}>Frontend Developer</span>

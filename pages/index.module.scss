@@ -37,7 +37,13 @@ $second: #69b8d0;
         color: $second;
 
         &__last {
+          position: relative;
 
+          .christmas {
+            position: absolute;
+            left: 50%;
+            height: 15px;
+          }
         }
       }
     }
@@ -80,6 +86,14 @@ $second: #69b8d0;
     &__text {
       &_main {
         font-size: 40px;
+
+        .surname {
+          &__last {
+            .christmas {
+              height: 30px;
+            }
+          }
+        }
       }
 
       &_description {
@@ -95,6 +109,14 @@ $second: #69b8d0;
     &__text {
       &_main {
         font-size: 60px;
+
+        surname {
+          &__last {
+            .christmas {
+              height: 50px;
+            }
+          }
+        }
       }
 
       &_description {
