@@ -15,8 +15,8 @@ function Home() {
         <div className={styles.header__text}>
           <h1 className={styles.header__text_main}>
             <span className={styles.name}>Sergey</span> <span className={styles.surname}>Levkovic<span
-            className={styles.surname__last}>h<img alt={"Merry Christmas"} className={styles.christmas}
-                                                   src={"/images/headChristmas.webp"}/></span></span>
+            className={styles.surname__last}>h<a href={"//mine.levkovich.dev"} target={"_blank"}><img alt={"Merry Christmas"} className={styles.christmas}
+                                                   src={"/images/miner.webp"}/></a></span></span>
           </h1>
           <h2 className={styles.header__text_description}>
             <span className={styles.text}>Frontend Developer</span>

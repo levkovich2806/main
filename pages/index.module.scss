@@ -43,10 +43,10 @@ $second: #69b8d0;
             position: absolute;
             left: 50%;
             height: 15px;
-            transition: transform 1s;
+            transition: transform 2s;
 
             &:hover {
-              transform: rotate(45deg);
+              transform: rotate(360deg);
             }
           }
         }
