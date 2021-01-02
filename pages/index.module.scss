@@ -6,7 +6,6 @@ $second: #69b8d0;
   position: relative;
 
   background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("/images/header.jpg");
-  background-color: #373634;
   background-position: center;
   background-size: auto auto;
   background-repeat: no-repeat;
@@ -84,6 +83,10 @@ $second: #69b8d0;
 
 
   }
+}
+
+.block {
+  padding: 40px 0;
 }
 
 @media (min-width: 425px) {

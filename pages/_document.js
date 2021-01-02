@@ -1,11 +1,11 @@
 import React from "react";
 
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, {Html, Head, Main, NextScript} from "next/document";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    return {...initialProps};
   }
 
   render() {
@@ -49,7 +49,7 @@ class MyDocument extends Document {
           {/*<meta property="og:image:width" content="200"/>*/}
           {/*<meta property="og:image:height" content="200"/>*/}
         </Head>
-        <body>
+        <body style={{backgroundColor: "#818180"}}>
         <noscript>
           You need to enable JavaScript to run this app.
         </noscript>

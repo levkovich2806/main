@@ -1,0 +1,77 @@
+.title {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.stackItems {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 0 auto;
+  left: 200px;
+
+  &__item {
+    position: absolute;
+    max-height: 75px;
+    max-width: 75px;
+
+    transform: translate(-100px);
+    //opacity: 0;
+    animation: circle 6s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    &_0 {
+
+    }
+
+    &_1 {
+      animation-delay: 1s;
+    }
+
+    &_2 {
+      animation-delay: 2s;
+    }
+
+    &_3 {
+      animation-delay: 3s;
+    }
+
+    &_4 {
+      animation-delay: 4s;
+    }
+
+    &_5 {
+      animation-delay: 5s;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+
+
+    }
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(-100px) rotate(0deg);
+
+  }
+  100% {
+    transform: rotate(360deg) translate(-100px) rotate(-360deg);
+  }
+}
+
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
