@@ -48,6 +48,7 @@ class MyDocument extends Document {
           {/*/>*/}
           {/*<meta property="og:image:width" content="200"/>*/}
           {/*<meta property="og:image:height" content="200"/>*/}
+          <script type="text/javascript" src={"/js/ya-metrika.js"}></script>
         </Head>
         <body style={{backgroundColor: "#818180"}}>
         <noscript>
