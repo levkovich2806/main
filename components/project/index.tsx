@@ -132,6 +132,17 @@ const getImage = ({image, url, name}: Skill) => {
     <a key={name} href={url} target={"_blank"} rel='noreferrer'>{imageComponent}</a> : imageComponent
 }
 
+function instanceOfTechnologies(key: string): key is Technologies {
+  return Object(TECHNOLOGIES).hasOwnProperty(key)
+}
+
+const getListItem = (itemName: Languages | Technologies) => {
+  const {name} = instanceOfTechnologies(itemName) ? TECHNOLOGIES[itemName] : LANGUAGES[itemName]
+  return (
+    <li key={name}>{name}</li>
+  )
+}
+
 const Project = ({type}: ProjectProps) => {
   if (!PROJECTS[type]) {
     return null
@@ -157,39 +168,21 @@ const Project = ({type}: ProjectProps) => {
           <div className={styles.project__description_languages}>
             Languages:
             <ul>
-              {languages.map((lang: Languages) => {
-                const {name} = LANGUAGES[lang]
-                return (
-                  <li key={name}>{name}</li>
-                )
-              })}
+              {languages.map((lang: Languages) => getListItem(lang))}
             </ul>
             <div className={styles.images}>
-              {languages.map((lang: Languages) => {
-                const language = LANGUAGES[lang]
-                return getImage(language)
-              })}
+              {languages.map((lang: Languages) => getImage(LANGUAGES[lang]))}
             </div>
           </div>
           <div className={styles.project__description_technologies}>
             Technologies:
             <ul>
-              {technologies.map((tech: Technologies) => {
-                const {name} = TECHNOLOGIES[tech]
-                return (
-                  <li key={name}>{name}</li>
-                )
-              })}
+              {technologies.map((tech: Technologies) => getListItem(tech))}
             </ul>
             <div className={styles.images}>
-              {technologies.map((tech: Technologies) => {
-                const technology = TECHNOLOGIES[tech]
-                return getImage(technology)
-              })}
+              {technologies.map((tech: Technologies) => getImage(TECHNOLOGIES[tech]))}
             </div>
           </div>
-
-
           <div className={styles.project__description_url}>
             <a href={url} target={"_blank"} rel='noreferrer'>{url}</a>
           </div>
