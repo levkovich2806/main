@@ -178,7 +178,7 @@ const Project = ({type}: ProjectProps) => {
               {technologies.map((tech: Technologies) => {
                 const {name} = TECHNOLOGIES[tech]
                 return (
-                  <li>{name}</li>
+                  <li key={name}>{name}</li>
                 )
               })}
             </ul>
