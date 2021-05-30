@@ -42,11 +42,6 @@ function Home() {
           <Project type={'mine'}/>
         </div>
       </section>
-
-      <footer className={styles.footer}>
-        <a href={"mailto:levkovich2806@gmail.com"}>levkovich2806@gmail.com</a>
-        <a href={"https://github.com/levkovich2806"}>https://github.com/levkovich2806</a>
-      </footer>
     </>
   )
 }

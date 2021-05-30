@@ -123,25 +123,6 @@ $second: #69b8d0;
   }
 }
 
-.footer {
-  background-color: black;
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-
-  a {
-    text-decoration: none;
-    color: white;
-
-    &:hover {
-      color: $second;
-    }
-  }
-}
-
 @media (min-width: 425px) {
   .header {
     &__text {
@@ -191,10 +172,5 @@ $second: #69b8d0;
       flex-direction: row;
       align-items: normal;
     }
-  }
-
-  .footer {
-    flex-direction: row;
-    align-items: center;
   }
 }
