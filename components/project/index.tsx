@@ -160,7 +160,7 @@ const Project = ({type}: ProjectProps) => {
               {languages.map((lang: Languages) => {
                 const {name} = LANGUAGES[lang]
                 return (
-                  <li>{name}</li>
+                  <li key={name}>{name}</li>
                 )
               })}
             </ul>
