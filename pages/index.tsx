@@ -20,6 +20,15 @@ function Home() {
           <h2 className={styles.header__text_description}>
             <span className={styles.text}>Frontend Developer</span>
           </h2>
+          <div className={styles.header__social}>
+            <a href={'https://github.com/levkovich2806'} target={'_blank'} rel='noreferrer'>
+              <img src={'icons/gh.svg'} alt={'github'}/>
+            </a>
+            <a href={'https://www.linkedin.com/in/sergey-levkovich-28a80184/'} target={'_blank'} rel='noreferrer'>
+              <img src={'icons/linkedin.svg'} alt={'linkedin'}/>
+            </a>
+          </div>
+
         </div>
         <div className={styles.header__arrow}>
           <a href={"#projects"}><img src={'images/arrow.gif'} alt={'Arrow down'}/></a>

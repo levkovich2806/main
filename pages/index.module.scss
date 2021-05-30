@@ -95,8 +95,14 @@ $second: #69b8d0;
         }
       }
     }
+  }
 
+  &__social {
+    padding-top: 20px;
 
+    a {
+      margin: 0 10px;
+    }
   }
 }
 
