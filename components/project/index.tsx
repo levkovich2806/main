@@ -1,6 +1,10 @@
 import React from 'react'
 import styles from './index.module.scss'
 
+interface ProjectProps {
+  type: Projects
+}
+
 type Projects =
   "wow"
   | "mine"
@@ -19,10 +23,6 @@ type Technologies =
 
 type Languages = "JavaScript" | 'TypeScript'
 
-interface ProjectProps {
-  type: Projects
-}
-
 interface ProjectParams {
   title: string
   description: string
@@ -33,13 +33,13 @@ interface ProjectParams {
   underConstruction?: boolean
 }
 
-interface TechnologiesParams {
-  image: string
+interface Skill {
+  image: string,
   name: string
   url?: string
 }
 
-const TECHNOLOGIES: Record<Technologies, TechnologiesParams> = {
+const TECHNOLOGIES: Record<Technologies, Skill> = {
   NextJs: {
     image: "images/next-js.svg",
     url: 'https://nextjs.org/',
@@ -92,13 +92,7 @@ const TECHNOLOGIES: Record<Technologies, TechnologiesParams> = {
   }
 }
 
-interface LanguagesParams {
-  image: string
-  name: string
-  url?: string
-}
-
-const LANGUAGES: Record<Languages, LanguagesParams> = {
+const LANGUAGES: Record<Languages, Skill> = {
   JavaScript: {
     image: 'images/JavaScript-logo.png',
     url: 'https://learn.javascript.ru/',
@@ -130,6 +124,12 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     url: 'https://mine.levkovich.dev',
     underConstruction: true
   }
+}
+
+const getImage = ({image, url, name}: Skill) => {
+  const imageComponent = <img src={image} alt={name} loading={'lazy'}/>
+  return url ?
+    <a key={name} href={url} target={"_blank"} rel='noreferrer'>{imageComponent}</a> : imageComponent
 }
 
 const Project = ({type}: ProjectProps) => {
@@ -166,9 +166,8 @@ const Project = ({type}: ProjectProps) => {
             </ul>
             <div className={styles.images}>
               {languages.map((lang: Languages) => {
-                const {image, url} = LANGUAGES[lang]
-                const imageComponent = <img src={image} alt={lang} loading={'lazy'}/>
-                return url ? <a href={url} target={"_blank"} rel='noreferrer'>{imageComponent}</a> : imageComponent
+                const language = LANGUAGES[lang]
+                return getImage(language)
               })}
             </div>
           </div>
@@ -184,9 +183,8 @@ const Project = ({type}: ProjectProps) => {
             </ul>
             <div className={styles.images}>
               {technologies.map((tech: Technologies) => {
-                const {image, url} = TECHNOLOGIES[tech]
-                const imageComponent = <img src={image} alt={tech} loading={'lazy'}/>
-                return url ? <a href={url} target={"_blank"} rel='noreferrer'>{imageComponent}</a> : imageComponent
+                const technology = TECHNOLOGIES[tech]
+                return getImage(technology)
               })}
             </div>
           </div>
