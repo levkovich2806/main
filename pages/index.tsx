@@ -31,7 +31,7 @@ function Home() {
 
         </div>
         <div className={styles.header__arrow}>
-          <a href={"#projects"}><img src={'images/arrow.gif'} alt={'Arrow down'}/></a>
+          <a href={"#projects"}><img src={'images/arrow_small.gif'} alt={'Arrow down'}/></a>
         </div>
       </header>
 
