@@ -1,3 +1,5 @@
+@import "../../mixins";
+
 .project {
   max-width: 500px;
   flex-grow: 1;
@@ -64,13 +66,12 @@
       padding-top: 15px;
 
       & img {
-        max-height: 40px;
+        height: 40px;
         object-fit: contain;
         padding: 0 10px;
 
         &:hover {
-          transition: all .2s ease-in-out;
-          transform: scale(1.1);
+          @include scaleTransform();
         }
       }
     }
