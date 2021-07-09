@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Head from 'next/head';
 
 import styles from './index.module.scss';
@@ -6,6 +6,18 @@ import SectionTitle from "../components/titles/section";
 import Project from "../components/project";
 
 function Home() {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'production') {
+      try {
+        import('a11y-checker').then(a11yChecker => {
+          a11yChecker.default()
+        })
+      } catch (e) {
+        console.error('Failed to load a11y-checker', e)
+      }
+    }
+  }, [])
+
   return (
     <>
       <Head>
