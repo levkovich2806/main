@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from './index.module.scss'
 
 interface ProjectProps {
@@ -153,7 +154,12 @@ const Project = ({type}: ProjectProps) => {
   return (
     <div className={styles.project}>
       <div className={styles.project__image}>
-        <img src={mainImage} alt={title} loading={'lazy'}/>
+        <Image
+          alt={title}
+          src={`/${mainImage}`}
+          width={200}
+          height={200}
+        />
       </div>
       <div className={styles.project__description}>
         <div>

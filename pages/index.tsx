@@ -22,10 +22,10 @@ function Home() {
           </h2>
           <div className={styles.header__social}>
             <a href={'https://github.com/levkovich2806'} target={'_blank'} rel='noreferrer'>
-              <img src={'icons/gh.svg'} alt={'github'}/>
+              <img src={'icons/gh.svg'} alt={'github'} width={40} height={40}/>
             </a>
             <a href={'https://www.linkedin.com/in/sergey-levkovich-28a80184/'} target={'_blank'} rel='noreferrer'>
-              <img src={'icons/linkedin.svg'} alt={'linkedin'}/>
+              <img src={'icons/linkedin.svg'} alt={'linkedin'} width={40} height={40}/>
             </a>
           </div>
 
