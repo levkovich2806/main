@@ -130,7 +130,7 @@ const PROJECTS: Record<Projects, ProjectParams> = {
 const getImage = ({image, url, name}: Skill) => {
   const imageComponent = <img src={image} alt={name} loading={'lazy'}/>
   return url ?
-    <a key={name} href={url} target={"_blank"} rel='noreferrer'>{imageComponent}</a> : imageComponent
+    <a key={name} href={url} title={name} target={"_blank"} rel='noreferrer'>{imageComponent}</a> : imageComponent
 }
 
 function instanceOfTechnologies(key: string): key is Technologies {

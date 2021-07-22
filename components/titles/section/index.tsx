@@ -7,9 +7,9 @@ interface ISectionTitle {
 
 const SectionTitle = ({title}: ISectionTitle) => {
   return (
-    <h1 className={styles.sectionTitle}>
+    <h2 className={styles.sectionTitle}>
       {title}
-    </h1>
+    </h2>
   )
 }
 
