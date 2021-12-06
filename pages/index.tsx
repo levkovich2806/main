@@ -30,7 +30,7 @@ function Home() {
             <span className={styles.name}>Sergey</span> <span className={styles.surname}>Levkovich</span>
           </h1>
           <h2 className={styles.header__text_description}>
-            <span className={styles.text}>Frontend Developer</span>
+            <span className={styles.text}>Software Developer</span>
           </h2>
           <div className={styles.header__social}>
             <a href={'https://github.com/levkovich2806'} target={'_blank'} rel='noreferrer'>
