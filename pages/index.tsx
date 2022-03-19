@@ -52,6 +52,7 @@ function Home() {
         <div className={styles.projects__cards}>
           <Project type={'wow'}/>
           <Project type={'mine'}/>
+          <Project type={'allRandom'}/>
         </div>
       </section>
     </>

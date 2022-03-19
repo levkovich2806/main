@@ -9,9 +9,10 @@ interface ProjectProps {
 type Projects =
   "wow"
   | "mine"
+    | "allRandom"
 
 type Technologies =
-  "React"
+  'React'
   | "NextJs"
   | 'Jest'
   | 'NodeJs'
@@ -21,6 +22,9 @@ type Technologies =
   | 'Redux'
   | 'ReduxSaga'
   | 'WebSocket'
+  | 'ReactNative'
+  | 'ReactNavigation'
+  | 'ReactNativeElements'
 
 type Languages = "JavaScript" | 'TypeScript'
 
@@ -90,6 +94,21 @@ const TECHNOLOGIES: Record<Technologies, Skill> = {
     image: 'images/websocket.svg',
     url: 'https://web-creator.ru/technologies/webdev/websockets',
     name: 'WebSocket'
+  },
+  ReactNative: {
+    image: 'images/react-native.png',
+    url: 'https://reactnative.dev/',
+    name: 'React Native'
+  },
+  ReactNavigation: {
+    image: 'images/react-navigation.svg',
+    url: 'https://reactnavigation.org/',
+    name: 'React Navigation'
+  },
+  ReactNativeElements: {
+    image: 'images/react-native-elements.png',
+    url: 'https://reactnativeelements.com/',
+    name: 'React Native Elements'
   }
 }
 
@@ -123,6 +142,15 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     technologies: ['React', 'Redux', 'ReduxSaga', 'WebSocket', 'Jest'],
     mainImage: 'images/mine.png',
     url: 'https://mine.levkovich.dev',
+    underConstruction: true
+  },
+  allRandom: {
+    title: '"All Random"',
+    description: 'Android application written in React Native.\r\nGet random values for different categories',
+    languages: ['TypeScript'],
+    technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeElements', 'Jest'],
+    mainImage: 'images/allRandom.webp',
+    url: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
     underConstruction: true
   }
 }
@@ -174,19 +202,19 @@ const Project = ({type}: ProjectProps) => {
           <div className={styles.project__description_languages}>
             Languages:
             <ul>
-              {languages.map((lang: Languages) => getListItem(lang))}
+              {(languages || []).map((lang: Languages) => getListItem(lang))}
             </ul>
             <div className={styles.images}>
-              {languages.map((lang: Languages) => getImage(LANGUAGES[lang]))}
+              {(languages || []).map((lang: Languages) => getImage(LANGUAGES[lang]))}
             </div>
           </div>
           <div className={styles.project__description_technologies}>
             Technologies:
             <ul>
-              {technologies.map((tech: Technologies) => getListItem(tech))}
+              {(technologies || []).map((tech: Technologies) => getListItem(tech))}
             </ul>
             <div className={styles.images}>
-              {technologies.map((tech: Technologies) => getImage(TECHNOLOGIES[tech]))}
+              {(technologies || []).map((tech: Technologies) => getImage(TECHNOLOGIES[tech]))}
             </div>
           </div>
           <div className={styles.project__description_url}>
