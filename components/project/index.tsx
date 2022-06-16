@@ -218,7 +218,7 @@ const Project = ({type}: ProjectProps) => {
             </div>
           </div>
           <div className={styles.project__description_url}>
-            <a href={url} target={"_blank"} rel='noreferrer'>{url}</a>
+            <a id={title.replace(/\s/g, '')} href={url} target={"_blank"} rel='noreferrer'>{url}</a>
           </div>
           {underConstruction && (
             <div className={styles.underConstruction}>
