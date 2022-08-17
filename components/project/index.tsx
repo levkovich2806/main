@@ -7,9 +7,10 @@ interface ProjectProps {
 }
 
 type Projects =
-  "wow"
+  | "wow"
   | "mine"
-    | "allRandom"
+  | "allRandom"
+  | "flyBoxHunting"
 
 type Technologies =
   'React'
@@ -25,6 +26,7 @@ type Technologies =
   | 'ReactNative'
   | 'ReactNavigation'
   | 'ReactNativeElements'
+  | 'HTML5Canvas'
 
 type Languages = "JavaScript" | 'TypeScript'
 
@@ -109,6 +111,11 @@ const TECHNOLOGIES: Record<Technologies, Skill> = {
     image: 'images/react-native-elements.png',
     url: 'https://reactnativeelements.com/',
     name: 'React Native Elements'
+  },
+  HTML5Canvas: {
+    image: 'images/html5-canvas.png',
+    url: 'https://www.w3schools.com/html/html5_canvas.asp',
+    name: 'HTML5 Canvas'
   }
 }
 
@@ -152,6 +159,15 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     mainImage: 'images/allRandom.webp',
     url: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
     underConstruction: true
+  },
+  flyBoxHunting: {
+    title: "Fly box hunting",
+    description: 'HTML5 canvas game.',
+    languages: ['JavaScript'],
+    technologies: ['HTML5Canvas'],
+    mainImage: 'images/fly-box.png',
+    url: 'https://fly-box-game.levkovich.dev/',
+    underConstruction: true
   }
 }
 
@@ -185,8 +201,8 @@ const Project = ({type}: ProjectProps) => {
         <Image
           alt={title}
           src={`/${mainImage}`}
-          width={200}
-          height={200}
+          layout='fill'
+          objectFit='contain'
         />
       </div>
       <div className={styles.project__description}>

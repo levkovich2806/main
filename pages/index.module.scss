@@ -124,9 +124,9 @@ $second: #69b8d0;
 
   &__cards {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 

@@ -51,8 +51,9 @@ function Home() {
         <SectionTitle title={'My pet projects'}/>
         <div className={styles.projects__cards}>
           <Project type={'wow'}/>
-          <Project type={'mine'}/>
           <Project type={'allRandom'}/>
+          <Project type={'flyBoxHunting'}/>
+          <Project type={'mine'}/>
         </div>
       </section>
     </>
