@@ -24,16 +24,16 @@ class MyDocument extends Document {
           <meta name="description"
                 content={`Personal page. Sergey Levkovich - web developer.`}
           />
-          <link rel="preconnect" href="https://fonts.gstatic.com"/>
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic" rel="stylesheet"/>
+          <link rel="preconnect" href="//fonts.gstatic.com"/>
+          <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600&subset=cyrillic" rel="stylesheet"/>
           <link rel="icon" type="image/png" href={"/favicon.ico"}/>
           <meta
             property="og:description"
-            content={`Personal page. Sergey Levkovich - web developer.`}
+            content={`Personal page. Sergey Levkovich - software developer.`}
           />
           <meta
             property="og:url"
-            content="https://levkovich.dev/"
+            content="//levkovich.dev/"
           />
           <meta
             property="og:type"
@@ -45,18 +45,18 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://levkovich.dev/levkovich.png"
+            content="//levkovich.dev/levkovich.png"
           />
           <meta property="og:image:width" content="200"/>
           <meta property="og:image:height" content="200"/>
 
           <meta
             property="twitter:card"
-            content="https://levkovich.dev/levkovich.png"
+            content="//levkovich.dev/levkovich.png"
           />
           <meta
             property="twitter:url"
-            content="https://levkovich.dev/"
+            content="//levkovich.dev/"
           />
           <meta
             property="twitter:title"
@@ -68,7 +68,7 @@ class MyDocument extends Document {
           />
           <meta
             property="twitter:image"
-            content="https://levkovich.dev/levkovich.png"
+            content="//levkovich.dev/levkovich.png"
           />
 
         </Head>
