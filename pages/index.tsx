@@ -54,6 +54,7 @@ function Home() {
           <Project type={'allRandom'}/>
           <Project type={'flyBoxHunting'}/>
           <Project type={'mine'}/>
+          <Project type={'paint'}/>
         </div>
       </section>
     </>

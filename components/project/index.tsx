@@ -11,6 +11,7 @@ type Projects =
   | "mine"
   | "allRandom"
   | "flyBoxHunting"
+  | "paint"
 
 type Technologies =
   'React'
@@ -27,6 +28,7 @@ type Technologies =
   | 'ReactNavigation'
   | 'ReactNativeElements'
   | 'HTML5Canvas'
+  | 'RxJs'
 
 type Languages = "JavaScript" | 'TypeScript'
 
@@ -116,6 +118,11 @@ const TECHNOLOGIES: Record<Technologies, Skill> = {
     image: 'images/html5-canvas.png',
     url: 'https://www.w3schools.com/html/html5_canvas.asp',
     name: 'HTML5 Canvas'
+  },
+  RxJs: {
+    image: 'images/rxjs.png',
+    url: 'https://rxjs.dev/',
+    name: 'RxJs'
   }
 }
 
@@ -168,6 +175,14 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     mainImage: 'images/fly-box.png',
     url: 'https://fly-box-game.levkovich.dev/',
     underConstruction: true
+  },
+  paint: {
+    title: "Draw whatever you want",
+    description: 'A simple drawing application.',
+    languages: ['JavaScript'],
+    technologies: ['HTML5Canvas', 'RxJs'],
+    mainImage: 'images/paint.png',
+    url: 'https://paint.levkovich.dev',
   }
 }
 
