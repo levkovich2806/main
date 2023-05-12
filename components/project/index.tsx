@@ -212,13 +212,15 @@ const Project = ({type}: ProjectProps) => {
 
   return (
     <div className={styles.project}>
-      <div className={styles.project__image}>
-        <Image
-          alt={title}
-          src={`/${mainImage}`}
-          layout='fill'
-          objectFit='contain'
-        />
+      <div className={styles.project__imageContainer}>
+        <div className={styles.project__image}>
+          <Image
+            alt={title}
+            src={`/${mainImage}`}
+            layout='fill'
+            objectFit='contain'
+          />
+        </div>
       </div>
       <div className={styles.project__description}>
         <div>
