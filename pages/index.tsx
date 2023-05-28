@@ -4,7 +4,7 @@ import Head from 'next/head';
 import styles from './index.module.scss';
 import SectionTitle from "../components/titles/section";
 import Project from "../components/project";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 function Home() {
   useEffect(() => {
