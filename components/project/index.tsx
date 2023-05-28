@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './index.module.scss'
+import Link from "next/link";
 
 interface ProjectProps {
   type: Projects
@@ -189,7 +190,7 @@ const PROJECTS: Record<Projects, ProjectParams> = {
 const getImage = ({image, url, name}: Skill) => {
   const imageComponent = <img src={image} alt={name} loading={'lazy'}/>
   return url ?
-    <a key={name} href={url} title={name} target={"_blank"} rel='noreferrer'>{imageComponent}</a> : imageComponent
+    <Link key={name} href={url} title={name} target={"_blank"} rel='noreferrer'>{imageComponent}</Link> : imageComponent
 }
 
 function instanceOfTechnologies(key: string): key is Technologies {
@@ -217,8 +218,7 @@ const Project = ({type}: ProjectProps) => {
           <Image
             alt={title}
             src={`/${mainImage}`}
-            layout='fill'
-            objectFit='contain'
+            fill
           />
         </div>
       </div>
@@ -251,7 +251,7 @@ const Project = ({type}: ProjectProps) => {
             </div>
           </div>
           <div className={styles.project__description_url}>
-            <a id={title.replace(/\s/g, '')} href={url} target={"_blank"} rel='noreferrer'>{url}</a>
+            <Link id={title.replace(/\s/g, '')} href={url} target={"_blank"} rel='noreferrer'>{url}</Link>
           </div>
           {underConstruction && (
             <div className={styles.underConstruction}>

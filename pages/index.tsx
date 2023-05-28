@@ -5,6 +5,7 @@ import styles from './index.module.scss';
 import SectionTitle from "../components/titles/section";
 import Project from "../components/project";
 import Image from "next/legacy/image";
+import Link from "next/link";
 
 function Home() {
   useEffect(() => {
@@ -34,15 +35,15 @@ function Home() {
             <span className={styles.text}>Software Developer</span>
           </h2>
           <div className={styles.header__social}>
-            <a href={'https://github.com/levkovich2806'} target={'_blank'} rel='noreferrer'>
+            <Link href={'https://github.com/levkovich2806'} target={'_blank'} rel='noreferrer'>
               <Image src={'/icons/gh.svg'} alt='github' title='github' width={40} height={40}/>
-            </a>
-            <a href={'https://www.linkedin.com/in/sergey-levkovich-28a80184/'} target={'_blank'} rel='noreferrer'>
+            </Link>
+            <Link href={'https://www.linkedin.com/in/sergey-levkovich-28a80184/'} target={'_blank'} rel='noreferrer'>
               <Image src={'/icons/linkedin.svg'} alt='linkedin' width={40} height={40}/>
-            </a>
-            <a href={'https://t.me/levkovich_dev'} target={'_blank'} rel='noreferrer'>
+            </Link>
+            <Link href={'https://t.me/levkovich_dev'} target={'_blank'} rel='noreferrer'>
               <Image src={'/icons/telegram-black-icon.svg'} alt='telegram' width={40} height={40}/>
-            </a>
+            </Link>
           </div>
 
         </div>
