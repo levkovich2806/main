@@ -15,7 +15,7 @@ export default function MyApp({Component, pageProps}) {
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
         <meta name="description"
-              content={`Personal page. Sergey Levkovich - web developer.`}
+              content={`Personal page. Sergey Levkovich - software developer.`}
         />
         <link rel="icon" type="image/png" href={"/favicon.ico"}/>
         <meta
