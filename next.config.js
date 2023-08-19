@@ -1,6 +1,11 @@
-const withImages = require('next-images')
-module.exports = withImages({
-  webpack(config, options) {
-    return config
-  }
-})
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+}
+
+module.exports = nextConfig
