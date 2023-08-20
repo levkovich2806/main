@@ -13,6 +13,7 @@ type Projects =
   | "allRandom"
   | "flyBoxHunting"
   | "paint"
+  | "yefl"
 
 type Technologies =
   'React'
@@ -30,6 +31,8 @@ type Technologies =
   | 'ReactNativeElements'
   | 'HTML5Canvas'
   | 'RxJs'
+  | 'NestJs'
+  | 'Mysql'
 
 type Languages = "JavaScript" | 'TypeScript'
 
@@ -124,6 +127,16 @@ const TECHNOLOGIES: Record<Technologies, Skill> = {
     image: 'images/rxjs.png',
     url: 'https://rxjs.dev/',
     name: 'RxJs'
+  },
+  NestJs: {
+    image: 'images/nestjs.svg',
+    url: 'https://nestjs.com/',
+    name: 'NestJs'
+  },
+  Mysql: {
+    image: 'images/mysql-logo.svg',
+    url: 'https://www.mysql.com/',
+    name: 'Mysql'
   }
 }
 
@@ -157,7 +170,6 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     technologies: ['React', 'Redux', 'ReduxSaga', 'WebSocket', 'Jest'],
     mainImage: 'images/mine.png',
     url: 'https://mine.levkovich.dev',
-    underConstruction: true
   },
   allRandom: {
     title: '"All Random"',
@@ -166,7 +178,6 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeElements', 'Jest'],
     mainImage: 'images/allRandom.webp',
     url: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
-    underConstruction: true
   },
   flyBoxHunting: {
     title: "Fly box hunting",
@@ -175,7 +186,6 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     technologies: ['HTML5Canvas'],
     mainImage: 'images/fly-box.png',
     url: 'https://fly-box-game.levkovich.dev/',
-    underConstruction: true
   },
   paint: {
     title: "Draw whatever you want",
@@ -184,6 +194,14 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     technologies: ['HTML5Canvas', 'RxJs'],
     mainImage: 'images/paint.png',
     url: 'https://paint.levkovich.dev',
+  },
+  yefl: {
+    title: "Amateur Football Leagues of Yerevan",
+    description: "Yefl.am - Source of Information on Amateur Football Leagues in Yerevan. Detailed match and round reports will help understand what transpired on the field and in which areas need to work on your game. Latest news about amateur football in Yerevan",
+    languages: ['TypeScript'],
+    technologies: ['NextJs', 'NestJs', 'Mysql'],
+    mainImage: 'images/yefl_logo_big.png',
+    url: 'https://www.yefl.am/'
   }
 }
 

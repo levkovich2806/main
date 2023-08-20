@@ -43,6 +43,7 @@ function Home() {
           <Project type={'flyBoxHunting'}/>
           {/*<Project type={'mine'}/>*/}
           <Project type={'paint'}/>
+          <Project type={'yefl'}/>
         </div>
       </section>
     </>
