@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import Image from 'next/image'
 import styles from './index.module.scss'
 import Link from "next/link";
@@ -222,7 +222,7 @@ const getListItem = (itemName: Languages | Technologies) => {
   )
 }
 
-const Project = ({type}: ProjectProps) => {
+const Project = memo(({type}: ProjectProps) => {
   if (!PROJECTS[type]) {
     return null
   }
@@ -280,6 +280,6 @@ const Project = ({type}: ProjectProps) => {
       </div>
     </div>
   )
-}
+})
 
 export default Project

@@ -5,6 +5,7 @@ import SectionTitle from "../../components/titles/section";
 import Project from "../../components/project";
 import Image from "next/image";
 import Link from "next/link";
+import {YuoTubeVideo} from "../../components/YuoTubeVideo";
 
 function Home() {
   return (
@@ -44,6 +45,13 @@ function Home() {
           {/*<Project type={'mine'}/>*/}
           <Project type={'paint'}/>
           <Project type={'yefl'}/>
+        </div>
+      </section>
+
+      <section className={styles.presentations} id={'speaker'}>
+        <SectionTitle title={'My presentations'}/>
+        <div className={styles.presentations__cards}>
+          <YuoTubeVideo embedLink={'https://www.youtube.com/embed/qPCpRQAhvf0?si=-QAIAENYZ5nSuybm'} />
         </div>
       </section>
     </>
