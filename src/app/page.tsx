@@ -22,10 +22,10 @@ function Home() {
             <Link href={'https://github.com/levkovich2806'} target={'_blank'} rel='noreferrer'>
               <Image src={'/icons/gh.svg'} alt='github' title='github' width={40} height={40}/>
             </Link>
-            <Link href={'https://www.linkedin.com/in/sergey-levkovich-28a80184/'} target={'_blank'} rel='noreferrer'>
+            <Link href={'https://www.linkedin.com/in/sergey-levkovich/'} target={'_blank'} rel='noreferrer'>
               <Image src={'/icons/linkedin.svg'} alt='linkedin' width={40} height={40}/>
             </Link>
-            <Link href={'https://t.me/levkovich_dev'} target={'_blank'} rel='noreferrer'>
+            <Link href={'https://t.me/gosuundeadghost'} target={'_blank'} rel='noreferrer'>
               <Image src={'/icons/telegram-black-icon.svg'} alt='telegram' width={40} height={40}/>
             </Link>
           </div>
