@@ -52,6 +52,7 @@ function Home() {
         <SectionTitle title={'My presentations'}/>
         <div className={styles.presentations__cards}>
           <YuoTubeVideo embedLink={'https://www.youtube.com/embed/qPCpRQAhvf0?si=-QAIAENYZ5nSuybm'} />
+          <YuoTubeVideo embedLink={'https://www.youtube.com/embed/r__rzKIt7wY?si=t6SRgyyxb5FkO7oH'} />
         </div>
       </section>
     </>
