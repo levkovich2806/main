@@ -172,11 +172,11 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     url: 'https://mine.levkovich.dev',
   },
   allRandom: {
-    title: '"All Random"',
+    title: '"Ultimate Random Generator"',
     description: 'Android application written in React Native.\r\nGet random values for different categories',
     languages: ['TypeScript'],
     technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeElements', 'Jest'],
-    mainImage: 'images/allRandom.webp',
+    mainImage: 'images/ultimateRandomGenerator.webp',
     url: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
   },
   flyBoxHunting: {
