@@ -1,4 +1,4 @@
-import React, {memo} from 'react'
+import React, { memo } from 'react'
 import Image from 'next/image'
 import styles from './index.module.scss'
 import Link from "next/link";
@@ -8,6 +8,7 @@ interface ProjectProps {
 }
 
 type Projects =
+  | "dotsAndBoxes"
   | "wow"
   | "mine"
   | "allRandom"
@@ -29,6 +30,7 @@ type Technologies =
   | 'ReactNative'
   | 'ReactNavigation'
   | 'ReactNativeElements'
+  | 'ReactNativeSkia'
   | 'HTML5Canvas'
   | 'RxJs'
   | 'NestJs'
@@ -42,7 +44,16 @@ interface ProjectParams {
   technologies: Array<Technologies>
   languages: Array<Languages>
   mainImage: string
-  url: string
+  url?: string
+  urlsWithImages?: {
+    [key: string]: {
+      url: string
+      image: string
+      alt: string
+      width?: number
+      height?: number
+    }
+  }
   underConstruction?: boolean
 }
 
@@ -118,6 +129,11 @@ const TECHNOLOGIES: Record<Technologies, Skill> = {
     url: 'https://reactnativeelements.com/',
     name: 'React Native Elements'
   },
+  ReactNativeSkia: {
+    image: 'images/react-native-skia.png',
+    url: 'https://shopify.github.io/react-native-skia/',
+    name: 'React Native Skia'
+  },
   HTML5Canvas: {
     image: 'images/html5-canvas.png',
     url: 'https://www.w3schools.com/html/html5_canvas.asp',
@@ -154,6 +170,29 @@ const LANGUAGES: Record<Languages, Skill> = {
 }
 
 const PROJECTS: Record<Projects, ProjectParams> = {
+  dotsAndBoxes: {
+    title: "Dots and Boxes. Dice rolling",
+    description: "Dice, Dots & Boxes — a modern take on the classic \"Dots and Boxes\" game, featuring a unique dice mode and an advanced AI opponent!",
+    languages: ['TypeScript'],
+    technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeSkia'],
+    mainImage: "images/dbd512.png",
+    urlsWithImages: {
+      appStore: {
+        url: "https://apps.apple.com/us/app/dots-and-boxes-dice-rolling/id6753718457",
+        image: "images/Download_on_the_App_Store_Badge.svg",
+        alt: "Download on the App Store",
+        width: 135,
+        height: 40
+      },
+      googlePlay: {
+        url: "https://play.google.com/store/apps/details?id=com.gosuapps.dotsandboxesdice",
+        image: "images/Google_Play_Store_badge_EN.svg",
+        alt: "Get it on Google Play",
+        width: 135,
+        height: 40
+      }
+    }
+  },
   wow: {
     title: "World of Warcraft data",
     description: "The site is dedicated to data on classes, races, etc. the legendary game World of Warcraft. All pages are static (NextJs + SSG). The data is pulled from its own server on which MongoDB is deployed, which contains the data received from the Blizzard API. The server is written in NodeJS + Express + MongoDB",
@@ -177,7 +216,15 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     languages: ['TypeScript'],
     technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeElements', 'Jest'],
     mainImage: 'images/ultimateRandomGenerator.webp',
-    url: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
+    urlsWithImages: {
+      googlePlay: {
+        url: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
+        image: 'images/Google_Play_Store_badge_EN.svg',
+        alt: 'Get it on Google Play',
+        width: 135,
+        height: 40
+      }
+    }
   },
   flyBoxHunting: {
     title: "Fly box hunting",
@@ -205,8 +252,8 @@ const PROJECTS: Record<Projects, ProjectParams> = {
   }
 }
 
-const getImage = ({image, url, name}: Skill) => {
-  const imageComponent = <img src={image} alt={name} loading={'lazy'}/>
+const getImage = ({ image, url, name }: Skill) => {
+  const imageComponent = <img src={image} alt={name} loading={'lazy'} />
   return url ?
     <Link key={name} href={url} title={name} target={"_blank"} rel='noreferrer'>{imageComponent}</Link> : imageComponent
 }
@@ -216,18 +263,18 @@ function instanceOfTechnologies(key: string): key is Technologies {
 }
 
 const getListItem = (itemName: Languages | Technologies) => {
-  const {name} = instanceOfTechnologies(itemName) ? TECHNOLOGIES[itemName] : LANGUAGES[itemName]
+  const { name } = instanceOfTechnologies(itemName) ? TECHNOLOGIES[itemName] : LANGUAGES[itemName]
   return (
     <li key={name}>{name}</li>
   )
 }
 
-const Project = memo(({type}: ProjectProps) => {
+const Project = memo(({ type }: ProjectProps) => {
   if (!PROJECTS[type]) {
     return null
   }
 
-  const {title, url, description, languages, technologies, mainImage, underConstruction} = PROJECTS[type]
+  const { title, url, urlsWithImages, description, languages, technologies, mainImage, underConstruction } = PROJECTS[type]
 
   return (
     <div className={styles.project}>
@@ -269,7 +316,22 @@ const Project = memo(({type}: ProjectProps) => {
             </div>
           </div>
           <div className={styles.project__description_url}>
-            <Link id={title.replace(/\s/g, '')} href={url} target={"_blank"} rel='noreferrer'>{url}</Link>
+            {urlsWithImages ? (
+              <div className={styles.project__badges}>
+                {Object.entries(urlsWithImages).map(([key, item]) => (
+                  <Link key={key} href={item.url} target={"_blank"} rel='noreferrer'>
+                    <Image
+                      src={`/${item.image}`}
+                      alt={item.alt}
+                      width={item.width || 135}
+                      height={item.height || 40}
+                    />
+                  </Link>
+                ))}
+              </div>
+            ) : url ? (
+              <Link id={title.replace(/\s/g, '')} href={url} target={"_blank"} rel='noreferrer'>{url}</Link>
+            ) : null}
           </div>
           {underConstruction && (
             <div className={styles.underConstruction}>
