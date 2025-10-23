@@ -56,6 +56,30 @@ function Home() {
           <YuoTubeVideo embedLink={'https://www.youtube.com/embed/r__rzKIt7wY?si=t6SRgyyxb5FkO7oH'} />
         </div>
       </section>
+
+      <section className={styles.articles} id={'articles'}>
+        <SectionTitle title={'My articles'} />
+        <div className={styles.articles__list}>
+          <div className={styles.article__item}>
+            <Link href={'https://hackernoon.com/memoization-in-react-powerful-tool-or-hidden-pitfall'} target={'_blank'} rel='noreferrer' className={styles.article__link}>
+              <h3 className={styles.article__title}>Memoization in React: Powerful Tool or Hidden Pitfall?</h3>
+              <p className={styles.article__description}>Exploring the benefits and potential pitfalls of memoization techniques in React applications</p>
+            </Link>
+          </div>
+          <div className={styles.article__item}>
+            <Link href={'https://hackernoon.com/master-react-by-designing-effective-apis-with-the-useimperativehandle-hook'} target={'_blank'} rel='noreferrer' className={styles.article__link}>
+              <h3 className={styles.article__title}>Master React by Designing Effective APIs With the useImperativeHandle Hook</h3>
+              <p className={styles.article__description}>Learn how to design effective APIs using the useImperativeHandle hook in React</p>
+            </Link>
+          </div>
+          <div className={styles.article__item}>
+            <Link href={'https://hackernoon.com/react-19-new-tools-to-work-with-forms'} target={'_blank'} rel='noreferrer' className={styles.article__link}>
+              <h3 className={styles.article__title}>React 19: New Tools To Work With Forms</h3>
+              <p className={styles.article__description}>Discover the new form handling capabilities and tools introduced in React 19</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
