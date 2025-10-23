@@ -78,15 +78,58 @@
       display: flex;
       flex-direction: column;
       padding: 15px 0;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+
+      // Стили для заголовков секций
+      &::before {
+        content: attr(data-label);
+        font-weight: 700;
+        font-size: 1rem;
+        color: #2c3e50;
+        margin-bottom: 12px;
+        padding: 8px 16px;
+        background: linear-gradient(135deg, rgba(105, 184, 208, 0.1) 0%, rgba(105, 184, 208, 0.05) 100%);
+        border-radius: 12px;
+        border-left: 4px solid #69b8d0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
 
       ul {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
         margin: 8px 0;
         color: #2c3e50;
         font-weight: 500;
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          padding: 8px 14px;
+          background: rgba(105, 184, 208, 0.08);
+          border-radius: 20px;
+          border: 1px solid rgba(105, 184, 208, 0.15);
+          font-size: 0.9rem;
+          transition: all 0.3s ease;
+          position: relative;
+
+          &:hover {
+            background: rgba(105, 184, 208, 0.12);
+            transform: translateX(5px);
+            border-color: rgba(105, 184, 208, 0.3);
+          }
+
+          &::before {
+            content: '•';
+            color: #69b8d0;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.2rem;
+          }
+        }
       }
     }
 
@@ -94,30 +137,37 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 12px;
       align-items: center;
-      margin-top: 8px;
+      margin-top: 12px;
+      justify-content: flex-start;
 
       & a {
-        height: 35px;
-        transition: transform 0.3s ease;
+        height: 40px;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(105, 184, 208, 0.2);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
         & img {
           height: 100%;
           object-fit: contain;
-          padding: 2px 8px;
-          border-radius: 4px;
-          background: rgba(255, 255, 255, 0.8);
           transition: all 0.3s ease;
-
-          &:hover {
-            transform: scale(1.1);
-            background: rgba(105, 184, 208, 0.1);
-          }
         }
 
         &:hover {
-          transform: translateY(-2px);
+          transform: translateY(-3px) scale(1.05);
+          background: rgba(105, 184, 208, 0.1);
+          border-color: rgba(105, 184, 208, 0.4);
+          box-shadow: 0 4px 15px rgba(105, 184, 208, 0.2);
+
+          & img {
+            transform: scale(1.1);
+          }
         }
       }
     }

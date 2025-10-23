@@ -174,7 +174,7 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     title: "Dots and Boxes. Dice rolling",
     description: "Dice, Dots & Boxes — a modern take on the classic \"Dots and Boxes\" game, featuring a unique dice mode and an advanced AI opponent!",
     languages: ['TypeScript'],
-    technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeSkia'],
+    technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeSkia', 'Redux'],
     mainImage: "images/dbd512.png",
     urlsWithImages: {
       appStore: {
@@ -297,8 +297,7 @@ const Project = memo(({ type }: ProjectProps) => {
           </div>
         </div>
         <div>
-          <div className={styles.project__description_languages}>
-            Languages:
+          <div className={styles.project__description_languages} data-label="Languages">
             <ul>
               {(languages || []).map((lang: Languages) => getListItem(lang))}
             </ul>
@@ -306,8 +305,7 @@ const Project = memo(({ type }: ProjectProps) => {
               {(languages || []).map((lang: Languages) => getImage(LANGUAGES[lang]))}
             </div>
           </div>
-          <div className={styles.project__description_technologies}>
-            Technologies:
+          <div className={styles.project__description_technologies} data-label="Technologies">
             <ul>
               {(technologies || []).map((tech: Technologies) => getListItem(tech))}
             </ul>
