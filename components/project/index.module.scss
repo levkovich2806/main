@@ -3,6 +3,7 @@
 .project {
   min-width: 350px;
   max-width: 450px;
+  // flex: 0 0 auto;
   flex: 1;
 
   font-size: 0.8rem;
@@ -219,6 +220,12 @@
     background: rgba(231, 76, 60, 0.1);
     border-radius: 20px;
     border: 1px solid rgba(231, 76, 60, 0.3);
+  }
+}
+
+@media (max-width: 425px) {
+  .project {
+    max-width: 100%;
   }
 }
 
