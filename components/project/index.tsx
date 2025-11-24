@@ -15,6 +15,7 @@ type Projects =
   | "flyBoxHunting"
   | "paint"
   | "yefl"
+  | "reminder"
 
 type Technologies =
   'React'
@@ -75,9 +76,9 @@ const TECHNOLOGIES: Record<Technologies, Skill> = {
     name: "Blizzard API"
   },
   React: {
-    image: 'images/react.webp',
+    image: 'images/react.svg',
     url: 'https://ru.reactjs.org/',
-    name: "React"
+    name: "React",
   },
   Redux: {
     image: 'images/redux.webp',
@@ -191,7 +192,8 @@ const PROJECTS: Record<Projects, ProjectParams> = {
         width: 135,
         height: 40
       }
-    }
+    },
+    underConstruction: true
   },
   wow: {
     title: "World of Warcraft data",
@@ -224,7 +226,8 @@ const PROJECTS: Record<Projects, ProjectParams> = {
         width: 135,
         height: 40
       }
-    }
+    },
+    underConstruction: true
   },
   flyBoxHunting: {
     title: "Fly box hunting",
@@ -249,6 +252,15 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     technologies: ['NextJs', 'NestJs', 'Mysql'],
     mainImage: 'images/yefl_logo_big.png',
     url: 'https://www.yefl.am/'
+  },
+  reminder: {
+    title: "Reminder",
+    description: "Chrome extension for easily saving websites and getting reminders to review them. Never forget to revisit an important website again. Manage your to-read list of websites, prioritize links, and receive timely notifications right in your browser. Quick save, set reminders, and organize links with customizable priority levels.",
+    languages: ['TypeScript'],
+    technologies: ['React'],
+    mainImage: 'images/reminder.png',
+    url: 'https://chromewebstore.google.com/detail/reminder/ffgdcddbibcjjdhbmdbclhagihkdhjdi',
+    underConstruction: true
   }
 }
 

@@ -46,6 +46,7 @@ function Home() {
           {/*<Project type={'mine'}/>*/}
           <Project type={'yefl'} />
           <Project type={'paint'} />
+          <Project type={'reminder'} />
         </div>
       </section>
 
