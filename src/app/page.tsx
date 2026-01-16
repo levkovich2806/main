@@ -62,6 +62,12 @@ function Home() {
         <SectionTitle title={'My articles'} />
         <div className={styles.articles__list}>
           <div className={styles.article__item}>
+            <Link href={'https://hackernoon.com/harmageddon-is-cancelled-how-we-taught-playwright-to-replay-har-with-dynamic-parameters'} target={'_blank'} rel='noreferrer' className={styles.article__link}>
+              <h3 className={styles.article__title}>HARmageddon is cancelled: how we taught Playwright to replay HAR with dynamic parameters</h3>
+              <p className={styles.article__description}>Learn how to solve HAR replay issues in Playwright E2E tests by handling dynamic parameters in CI/CD pipelines</p>
+            </Link>
+          </div>
+          <div className={styles.article__item}>
             <Link href={'https://hackernoon.com/memoization-in-react-powerful-tool-or-hidden-pitfall'} target={'_blank'} rel='noreferrer' className={styles.article__link}>
               <h3 className={styles.article__title}>Memoization in React: Powerful Tool or Hidden Pitfall?</h3>
               <p className={styles.article__description}>Exploring the benefits and potential pitfalls of memoization techniques in React applications</p>
