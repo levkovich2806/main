@@ -193,6 +193,7 @@ const PROJECTS: Record<Projects, ProjectParams> = {
         height: 40
       }
     },
+    url: 'https://dotsandboxesdice.levkovich.dev/',
     underConstruction: true
   },
   wow: {
@@ -213,12 +214,19 @@ const PROJECTS: Record<Projects, ProjectParams> = {
     url: 'https://mine.levkovich.dev',
   },
   allRandom: {
-    title: '"Ultimate Random Generator"',
+    title: 'Ultimate Random Generator',
     description: 'Android application written in React Native.\r\nGet random values for different categories',
     languages: ['TypeScript'],
     technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeElements', 'Jest'],
     mainImage: 'images/ultimateRandomGenerator.webp',
     urlsWithImages: {
+      appStore: {
+        url: 'https://apps.apple.com/us/app/ultimate-random-generator/id6757863299',
+        image: 'images/Download_on_the_App_Store_Badge.svg',
+        alt: 'Download on the App Store',
+        width: 135,
+        height: 40
+      },
       googlePlay: {
         url: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
         image: 'images/Google_Play_Store_badge_EN.svg',
@@ -227,6 +235,7 @@ const PROJECTS: Record<Projects, ProjectParams> = {
         height: 40
       }
     },
+    url: 'https://ultimaterandomgenerator.levkovich.dev/',
     underConstruction: true
   },
   flyBoxHunting: {
@@ -339,7 +348,8 @@ const Project = memo(({ type }: ProjectProps) => {
                   </Link>
                 ))}
               </div>
-            ) : url ? (
+            ) : null}
+            {url ? (
               <Link id={title.replace(/\s/g, '')} href={url} target={"_blank"} rel='noreferrer'>{url}</Link>
             ) : null}
           </div>
