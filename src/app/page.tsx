@@ -62,6 +62,12 @@ function Home() {
         <SectionTitle title={'My articles'} />
         <div className={styles.articles__list}>
           <div className={styles.article__item}>
+            <Link href={'https://hackernoon.com/react-activity-when-a-render-no-longer-guarantees-an-effect'} target={'_blank'} rel='noreferrer' className={styles.article__link}>
+              <h3 className={styles.article__title}>React Activity: When A Render No Longer Guarantees an Effect</h3>
+              <p className={styles.article__description}>What React Activity changes about the render → Effect contract, and why that can expose hidden bugs in legacy code</p>
+            </Link>
+          </div>
+          <div className={styles.article__item}>
             <Link href={'https://hackernoon.com/harmageddon-is-cancelled-how-we-taught-playwright-to-replay-har-with-dynamic-parameters'} target={'_blank'} rel='noreferrer' className={styles.article__link}>
               <h3 className={styles.article__title}>HARmageddon is cancelled: how we taught Playwright to replay HAR with dynamic parameters</h3>
               <p className={styles.article__description}>Learn how to solve HAR replay issues in Playwright E2E tests by handling dynamic parameters in CI/CD pipelines</p>
