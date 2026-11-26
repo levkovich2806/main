@@ -35,7 +35,7 @@ const PROJECTS = [
     technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeSkia', 'Redux'],
     mainImage: 'images/dbd512.png',
     stores: {
-      appStore: 'https://apps.apple.com/us/app/dots-and-boxes-dice-rolling/id6753718457',
+      appStore: 'https://apps.apple.com/app/apple-store/id6753718457?pt=128200592&ct=levkovich&mt=8',
       googlePlay: 'https://play.google.com/store/apps/details?id=com.gosuapps.dotsandboxesdice',
     },
     url: 'https://dotsandboxesdice.levkovich.dev/',
@@ -47,7 +47,7 @@ const PROJECTS = [
     technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeElements', 'Jest'],
     mainImage: 'images/ultimateRandomGenerator.webp',
     stores: {
-      appStore: 'https://apps.apple.com/us/app/ultimate-random-generator/id6757863299',
+      appStore: 'https://apps.apple.com/app/apple-store/id6757863299?pt=128200592&ct=levkovich&mt=8',
       googlePlay: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
     },
     url: 'https://ultimaterandomgenerator.levkovich.dev/',
