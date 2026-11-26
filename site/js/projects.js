@@ -15,7 +15,6 @@ const TECHNOLOGIES = {
   ReactNativeElements: { name: 'React Native Elements', image: 'images/react-native-elements.png', url: 'https://reactnativeelements.com/' },
   ReactNativeSkia: { name: 'React Native Skia', image: 'images/react-native-skia.png', url: 'https://shopify.github.io/react-native-skia/' },
   HTML5Canvas: { name: 'HTML5 Canvas', image: 'images/html5-canvas.png', url: 'https://www.w3schools.com/html/html5_canvas.asp' },
-  RxJs: { name: 'RxJs', image: 'images/rxjs.png', url: 'https://rxjs.dev/' },
 };
 
 const LANGUAGES = {
@@ -40,11 +39,10 @@ const PROJECTS = [
       googlePlay: 'https://play.google.com/store/apps/details?id=com.gosuapps.dotsandboxesdice',
     },
     url: 'https://dotsandboxesdice.levkovich.dev/',
-    underConstruction: true,
   },
   {
     title: 'Ultimate Random Generator',
-    description: 'Android application written in React Native. Get random values for different categories',
+    description: 'iOS and Android application written in React Native. Get random values for different categories',
     languages: ['TypeScript'],
     technologies: ['ReactNative', 'ReactNavigation', 'ReactNativeElements', 'Jest'],
     mainImage: 'images/ultimateRandomGenerator.webp',
@@ -53,7 +51,6 @@ const PROJECTS = [
       googlePlay: 'https://play.google.com/store/apps/details?id=com.allrandom&hl=en_IN&gl=US',
     },
     url: 'https://ultimaterandomgenerator.levkovich.dev/',
-    underConstruction: true,
   },
   {
     title: 'Fly box hunting',
@@ -72,21 +69,12 @@ const PROJECTS = [
     url: 'https://www.yefl.am/',
   },
   {
-    title: 'Draw whatever you want',
-    description: 'A simple drawing application.',
-    languages: ['JavaScript'],
-    technologies: ['HTML5Canvas', 'RxJs'],
-    mainImage: 'images/paint.png',
-    url: 'https://paint.levkovich.dev',
-  },
-  {
     title: 'Reminder',
     description: 'Chrome extension for easily saving websites and getting reminders to review them. Never forget to revisit an important website again. Manage your to-read list of websites, prioritize links, and receive timely notifications right in your browser. Quick save, set reminders, and organize links with customizable priority levels.',
     languages: ['TypeScript'],
     technologies: ['React'],
     mainImage: 'images/reminder.png',
     url: 'https://chromewebstore.google.com/detail/reminder/ffgdcddbibcjjdhbmdbclhagihkdhjdi',
-    underConstruction: true,
   },
 ];
 
