@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sergey Levkovich</title>
+  <meta name="description" content="Personal page. Sergey Levkovich - software developer">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/projects.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">
+      <h1 class="header__text_main">
+        <span class="name">Sergey</span> <span class="surname">Levkovich</span>
+      </h1>
+      <h2 class="header__text_description">
+        <span class="text">Software Developer</span>
+      </h2>
+      <div class="header__social">
+        <a href="https://github.com/levkovich2806" target="_blank" rel="noreferrer">
+          <img src="icons/gh.svg" alt="github" title="github" width="40" height="40">
+        </a>
+        <a href="https://www.linkedin.com/in/sergey-levkovich/" target="_blank" rel="noreferrer">
+          <img src="icons/linkedin.svg" alt="linkedin" width="40" height="40">
+        </a>
+        <a href="https://t.me/gosuundeadghost" target="_blank" rel="noreferrer">
+          <img src="icons/telegram-black-icon.svg" alt="telegram" width="40" height="40">
+        </a>
+      </div>
+    </div>
+    <div class="header__arrow">
+      <a href="#projects"><img src="images/arrow_small.gif" alt="Arrow down"></a>
+    </div>
+  </header>
+
+  <section class="section projects" id="projects">
+    <h2 class="sectionTitle">My pet projects</h2>
+    <!-- Карточки рендерятся из js/projects.js -->
+    <div class="projects__cards" id="projects-list"></div>
+  </section>
+
+  <section class="section presentations" id="speaker">
+    <h2 class="sectionTitle">My presentations</h2>
+    <div class="presentations__cards">
+      <iframe src="https://www.youtube.com/embed/qPCpRQAhvf0?si=-QAIAENYZ5nSuybm"
+              title="Optimizing React: Web &amp; Beyond" loading="lazy" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/r__rzKIt7wY?si=t6SRgyyxb5FkO7oH"
+              title="Optimizing React: Web &amp; Beyond" loading="lazy" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="section articles" id="articles">
+    <h2 class="sectionTitle">My articles</h2>
+    <div class="articles__list">
+      <div class="article__item">
+        <a class="article__link" href="https://hackernoon.com/react-activity-when-a-render-no-longer-guarantees-an-effect" target="_blank" rel="noreferrer">
+          <h3 class="article__title">React Activity: When A Render No Longer Guarantees an Effect</h3>
+          <p class="article__description">What React Activity changes about the render → Effect contract, and why that can expose hidden bugs in legacy code</p>
+        </a>
+      </div>
+      <div class="article__item">
+        <a class="article__link" href="https://hackernoon.com/harmageddon-is-cancelled-how-we-taught-playwright-to-replay-har-with-dynamic-parameters" target="_blank" rel="noreferrer">
+          <h3 class="article__title">HARmageddon is cancelled: how we taught Playwright to replay HAR with dynamic parameters</h3>
+          <p class="article__description">Learn how to solve HAR replay issues in Playwright E2E tests by handling dynamic parameters in CI/CD pipelines</p>
+        </a>
+      </div>
+      <div class="article__item">
+        <a class="article__link" href="https://hackernoon.com/memoization-in-react-powerful-tool-or-hidden-pitfall" target="_blank" rel="noreferrer">
+          <h3 class="article__title">Memoization in React: Powerful Tool or Hidden Pitfall?</h3>
+          <p class="article__description">Exploring the benefits and potential pitfalls of memoization techniques in React applications</p>
+        </a>
+      </div>
+      <div class="article__item">
+        <a class="article__link" href="https://hackernoon.com/master-react-by-designing-effective-apis-with-the-useimperativehandle-hook" target="_blank" rel="noreferrer">
+          <h3 class="article__title">Master React by Designing Effective APIs With the useImperativeHandle Hook</h3>
+          <p class="article__description">Learn how to design effective APIs using the useImperativeHandle hook in React</p>
+        </a>
+      </div>
+      <div class="article__item">
+        <a class="article__link" href="https://hackernoon.com/react-19-new-tools-to-work-with-forms" target="_blank" rel="noreferrer">
+          <h3 class="article__title">React 19: New Tools To Work With Forms</h3>
+          <p class="article__description">Discover the new form handling capabilities and tools introduced in React 19</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
